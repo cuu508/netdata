@@ -21,7 +21,6 @@ void sanity_check(void) {
     BUILD_BUG_ON(WORKER_UTILIZATION_MAX_JOB_TYPES < ACLK_MAX_ENUMERATIONS_DEFINED);
 }
 
-#ifdef ENABLE_ACLK
 static struct aclk_database_cmd aclk_database_deq_cmd(void)
 {
     struct aclk_database_cmd ret;
@@ -41,7 +40,6 @@ static struct aclk_database_cmd aclk_database_deq_cmd(void)
 
     return ret;
 }
-#endif
 
 static void aclk_database_enq_cmd(struct aclk_database_cmd *cmd)
 {
